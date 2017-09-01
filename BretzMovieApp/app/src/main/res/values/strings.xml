@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">Bree Test App</string>
+    <string name="app_name">Bretzner\'s Movie App</string>
     <string name="action_settings">Settings</string>
     <string name="txt_hint">Type your message</string>
     <string name="btn_click">Click</string>
+    <string name="btn_movie">List Movies</string>
+    <string name="btn_exit">Exit</string>
     <string name="title_activity_movie">MovieActivity</string>
-
 </resources>

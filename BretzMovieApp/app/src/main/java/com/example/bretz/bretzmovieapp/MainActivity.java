@@ -1,4 +1,4 @@
-package com.example.bretz.breetestapp;
+package com.example.bretz.bretzmovieapp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,12 +11,18 @@ import android.view.Menu;
 import android.widget.Button;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     public final String MICONSTANTE = "mensaje";
+
+    public MainActivity() {
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         Button btn_save = (Button) findViewById(R.id.btnSave);
-        final EditText txt_name = (EditText)findViewById(R.id.txtName);
+        final EditText txt_name = (EditText) findViewById(R.id.txtName);
+        Button btn_movie = (Button) findViewById(R.id.btnListMovie);
+        final ListView lst_movie = (ListView)findViewById(R.id.lstMovies);
 
         setSupportActionBar(toolbar);
 
@@ -37,26 +45,35 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         btn_save.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(getApplicationContext(),SecondActivity.class);
-                EditText editText = (EditText)findViewById(R.id.txtName);
+                Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                EditText editText = (EditText) findViewById(R.id.txtName);
                 String message = editText.getText().toString();
                 intent.putExtra("Mensaje",message);
                 startActivity(intent);
 
                 Toast.makeText(getApplicationContext(),"test",Toast.LENGTH_LONG).show();
                 Snackbar.make(view,txt_name.getText().toString(),Snackbar.LENGTH_LONG).setAction("Action",null).show();
-
-
             }
         });
 
 
+        btn_movie.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intentMovie = new Intent(getApplicationContext(),MovieAdapter.class);
+                ListView lstMoviesList = (ListView)findViewById(R.id.lstMovies);
+                String features = lstMoviesList.toString();
+                startActivity(intentMovie);
+
+
+            }
+
+        });
     }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
