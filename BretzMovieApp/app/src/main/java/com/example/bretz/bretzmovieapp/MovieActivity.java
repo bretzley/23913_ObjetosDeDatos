@@ -42,7 +42,7 @@ public class MovieActivity extends AppCompatActivity {
         String movieYear = intent.getStringExtra("Year");
         int movieYearInt = Integer.parseInt(movieYear);
 
-        Movies M = new Movies(movieName,0,"","",0);
+        Movies M = new Movies(movieName,movieDurationInt,movieDirector,movieGenre,movieYearInt);
         movieArray.add(M);
 
         fillMovieData(movieArray);
