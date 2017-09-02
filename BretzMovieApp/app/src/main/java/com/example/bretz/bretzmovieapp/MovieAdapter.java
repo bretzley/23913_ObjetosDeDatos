@@ -22,7 +22,7 @@ public class MovieAdapter extends ArrayAdapter<Movies> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View oView=super.getView(position, convertView, parent);
         TextView txtMovieName = (TextView) oView.findViewById(R.id.txtMovieName);
-        TextView txtMovieDuration = (TextView) oView.findViewById(R.id.txtMovieDirector);
+        TextView txtMovieDuration = (TextView) oView.findViewById(R.id.txtMovieDuration);
         TextView txtMovieDirector =(TextView) oView.findViewById(R.id.txtMovieDirector);
         TextView txtMovieGenre = (TextView) oView.findViewById(R.id.txtMovieGenre);
         TextView txtMovieYear = (TextView) oView.findViewById(R.id.txtMovieYear);

@@ -15,6 +15,8 @@ public class Movies {
 
     }
 
+
+
     public Movies(String name, int duration, String director, String genre, int year) {
         this.name = name;
         this.duration = duration;

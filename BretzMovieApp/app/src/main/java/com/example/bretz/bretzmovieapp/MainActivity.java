@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
-        Button btn_save = (Button) findViewById(R.id.btnSave);
+        //*Button btn_save = (Button) findViewById(R.id.btnSave);
         final EditText txt_name = (EditText) findViewById(R.id.txtName);
         Button btn_movie = (Button) findViewById(R.id.btnListMovie);
         final ListView lst_movie = (ListView)findViewById(R.id.lstMovies);
@@ -46,28 +46,52 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        btn_save.setOnClickListener(new View.OnClickListener(){
+        /*btn_movie.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MovieActivity.class);
                 EditText editText = (EditText) findViewById(R.id.txtName);
-                String message = editText.getText().toString();
-                intent.putExtra("Mensaje",message);
+                String movieName = editText.getText().toString();
+                intent.putExtra("Name",movieName);
+
+                EditText editTextDur = (EditText) findViewById(R.id.txtDuration);
+                String movieDuration = editTextDur.getText().toString();
+                intent.putExtra("Duration",movieDuration);
+
+
+                EditText editTextDir = (EditText) findViewById(R.id.txtDirector);
+                String movieDirector = editTextDir.getText().toString();
+                intent.putExtra("Director",movieDirector);
+
+
+                EditText editTextGen = (EditText) findViewById(R.id.txtGenre);
+                String movieGenre = editTextGen.getText().toString();
+
+                intent.putExtra("Genre",movieGenre);
+
+
+                EditText editTextYr = (EditText) findViewById(R.id.txtYear);
+                String movieYear = editTextYr.getText().toString();
+                intent.putExtra("Year",movieYear);
+
                 startActivity(intent);
 
-                Toast.makeText(getApplicationContext(),"test",Toast.LENGTH_LONG).show();
-                Snackbar.make(view,txt_name.getText().toString(),Snackbar.LENGTH_LONG).setAction("Action",null).show();
+                *//*Toast.makeText(getApplicationContext(),"test",Toast.LENGTH_LONG).show();
+                Snackbar.make(view,txt_name.getText().toString(),Snackbar.LENGTH_LONG).setAction("Action",null).show();*//*
             }
-        });
+        });*/
 
 
-        btn_movie.setOnClickListener(new View.OnClickListener(){
+       btn_movie.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intentMovie = new Intent(getApplicationContext(),MovieAdapter.class);
-                ListView lstMoviesList = (ListView)findViewById(R.id.lstMovies);
-                String features = lstMoviesList.toString();
-                startActivity(intentMovie);
+                Intent intent = new Intent(getApplicationContext(),MovieActivity.class);
+                EditText editText = (EditText) findViewById(R.id.txtName);
+                String movieName = editText.getText().toString();
+                intent.putExtra("Name",movieName);
+                /*ListView lstMoviesList = (ListView)findViewById(R.id.lstMovies);
+                String features = lstMoviesList.toString();*/
+                startActivity(intent);
 
 
             }
