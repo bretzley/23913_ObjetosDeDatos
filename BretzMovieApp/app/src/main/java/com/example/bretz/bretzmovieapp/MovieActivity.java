@@ -29,8 +29,7 @@ public class MovieActivity extends AppCompatActivity {
         oMovieAdapter = new MovieAdapter(this);
         oListView.setAdapter(oMovieAdapter);
 
-        ArrayList<Movies> movieArray = new ArrayList<Movies>();
-
+        ArrayList<Movies> movieArray = new ArrayList<>();
 
 
         Intent intent = getIntent();
