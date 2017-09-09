@@ -9,23 +9,18 @@ import android.os.Parcelable;
  */
 
 public class Customers implements Parcelable{
-    private int numID;
     private String name;
     private int operations;
 
-    public Customers(int numID, String name, int operations){
-        this.numID = numID;
+    public Customers(String name, int operations){
         this.name = name;
         this.operations = operations;
 
     }
 
-    public Customers(){
 
-    }
 
     public Customers(Parcel in){
-        numID = in.readInt();
         name = in.readString();
         operations = in.readInt();
     }
@@ -38,13 +33,7 @@ public class Customers implements Parcelable{
 
     public int getOperations(){return operations;}
 
-    public int getNumID() {
-        return numID;
-    }
 
-    public void setNumID(int numID) {
-        this.numID = numID;
-    }
 
     public void setOperations(int operations) {
         this.operations = operations;
@@ -63,12 +52,12 @@ public class Customers implements Parcelable{
     }
 
     public static final Parcelable.Creator CREATOR = new Parcelable.Creator(){
-        @Override
+
         public  Customers createFromParcel(Parcel in){
             return new Customers(in);
         }
 
-        @Override
+
         public Customers[] newArray(int size){
             return new Customers[size];
         }

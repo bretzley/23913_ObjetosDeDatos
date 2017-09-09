@@ -19,8 +19,11 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements TextWatcher {
+public class MainActivity extends AppCompatActivity{
 
+
+    CustomersAdapter customerAdap;
+    ArrayList<Customers> array_customers = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,15 +35,16 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
         final EditText txt_id = (EditText) findViewById(R.id.txtID);
         final EditText txt_name = (EditText) findViewById(R.id.txtCustomer);
         final EditText txt_operations  = (EditText) findViewById(R.id.txtOperations);
-        final ArrayList<Customers> array_customers = new ArrayList<>();
-        final ArrayAdapter<Customers> custAdapter = new ArrayAdapter<>(this,android.R.layout.simple_expandable_list_item_1,array_customers);
-        final CustomersAdapter customerAdap = new CustomersAdapter(this);
-        final ListView lst_customers = (ListView)findViewById(R.id.lstCustomers);
-        lst_customers.setAdapter(custAdapter);
-        //lst_customers.setAdapter(customerAdap);
+
+        //final ArrayList<Customers> array_customers = new ArrayList<>();
+        //final ArrayAdapter<Customers> custAdapter = new ArrayAdapter<>(this,android.R.layout.simple_expandable_list_item_1,array_customers);
+
+        ListView lst_customers = (ListView)findViewById(R.id.lstCustomers);
+        customerAdap = new CustomersAdapter(this);
+        //lst_customers.setAdapter(custAdapter);
+        lst_customers.setAdapter(customerAdap);
 
 
-        txt_operations.addTextChangedListener(this);
 
         btn_add.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -51,13 +55,12 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
                 int operationsInt = Integer.parseInt(operationsNum);
                 int ID = array_customers.size() +1;
 
+                Customers customer = new Customers(customerName,operationsInt);
+                array_customers.add(customer);
 
-
-                Customers customer = new Customers(ID,customerName,operationsInt);
-                //array_customers.add(customer);
-
-                //customerAdap.add(customer);
-                custAdapter.add(customer);
+                customerAdap.add(customer);
+                customerAdap.notifyDataSetChanged();
+                //custAdapter.add(customer);
 
 
                 Toast.makeText(getApplicationContext(),"Customer Added Successfully!",Toast.LENGTH_LONG).show();
@@ -71,34 +74,10 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), CustomerActivity.class);
 
-                String customerName = txt_name.getText().toString();
-                String operationsNum = txt_operations.getText().toString();
-                int operationsInt = Integer.parseInt(operationsNum);
-                int ID = array_customers.size() +1;
-
-                Customers customer = new Customers();
-                customer.setName(customerName);
-                customer.setName(operationsNum);
-
-
-                intent.putExtra("Success",customer);
-                startActivityForResult(intent, 1);
+                intent.putExtra("Success",array_customers);
+                startActivity(intent);
             }
         });
     }
 
-    @Override
-    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-    }
-
-    @Override
-    public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-    }
-
-    @Override
-    public void afterTextChanged(Editable s) {
-
-    }
 }

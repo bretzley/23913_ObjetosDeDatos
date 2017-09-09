@@ -29,8 +29,8 @@ public class CustomersAdapter extends ArrayAdapter<Customers>{
         TextView txtCustomer = (TextView) custView.findViewById(R.id.txtCustomer);
         TextView txtOperations = (TextView) custView.findViewById(R.id.txtOperations);
 
-        Customers customer = this.getItem(position);
-        txtID.setText(customer.getNumID());
+        final Customers customer = this.getItem(position);
+        txtID.setText(position + 1);
         txtCustomer.setText(customer.getName());
         txtOperations.setText(customer.getOperations());
 

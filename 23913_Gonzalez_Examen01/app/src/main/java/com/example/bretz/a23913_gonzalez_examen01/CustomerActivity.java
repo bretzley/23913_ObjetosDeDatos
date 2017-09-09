@@ -11,22 +11,22 @@ public class CustomerActivity extends AppCompatActivity {
 
     CustomersAdapter CustomerAdapter;
     ListView CustListView;
-    ArrayList<Customers> customerArray = new ArrayList<>();
+    ArrayList<Customers> customerArray;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer);
 
-        CustListView = (ListView) findViewById(R.id.lstCustomers);
+        CustListView = (ListView) findViewById(R.id.lstQueue);
         CustomerAdapter = new CustomersAdapter(this);
         CustListView.setAdapter(CustomerAdapter);
         customerArray = this.getIntent().getParcelableArrayListExtra("Success");
 
 
-        Customers customers = this.getIntent().getParcelableExtra("Success");
+        //Customers customers = this.getIntent().getParcelableExtra("Success");
 
-        customerArray.add(customers);
+        //customerArray.add(customers);
         fillCustomers(customerArray);
     }
 
@@ -34,8 +34,20 @@ public class CustomerActivity extends AppCompatActivity {
     private void fillCustomers(ArrayList<Customers> CustomersList)
     {
         CustomerAdapter.clear();
-        for (Customers customers : CustomersList){
-            CustomerAdapter.add(customers);
+        int current = CustomersList.size();
+
+        while(current > 0){
+            for (Customers customers : CustomersList){
+                int operation = customers.getOperations();
+                if(operation > 0){
+                    CustomerAdapter.add(new Customers(customers.getName(), customers.getOperations()));
+                    customers.setOperations(operation-1);
+                }
+                else {
+                    current--;
+                }
+        }
+
         }
         CustomerAdapter.notifyDataSetChanged();
     }
