@@ -25,11 +25,12 @@ public class Customers implements Parcelable{
         operations = in.readInt();
     }
 
-    public String getName(){return name;}
-
     public void setName(String name) {
         this.name = name;
     }
+    public String getName(){return name;}
+
+
 
     public int getOperations(){return operations;}
 

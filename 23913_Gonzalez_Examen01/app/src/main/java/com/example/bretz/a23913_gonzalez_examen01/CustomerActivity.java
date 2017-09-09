@@ -31,6 +31,11 @@ public class CustomerActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
+
     private void fillCustomers(ArrayList<Customers> CustomersList)
     {
         CustomerAdapter.clear();

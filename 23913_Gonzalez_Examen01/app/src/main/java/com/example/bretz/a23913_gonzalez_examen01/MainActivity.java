@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity{
 
 
     CustomersAdapter customerAdap;
-    ArrayList<Customers> array_customers = new ArrayList<>();
+    ArrayList<Customers> array_customers = new ArrayList<Customers>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

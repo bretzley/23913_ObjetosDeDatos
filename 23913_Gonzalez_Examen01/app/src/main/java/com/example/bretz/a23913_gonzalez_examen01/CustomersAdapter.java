@@ -26,13 +26,13 @@ public class CustomersAdapter extends ArrayAdapter<Customers>{
 
         View custView = super.getView(position, convertView, parent);
         TextView txtID = (TextView) custView.findViewById(R.id.txtID);
-        TextView txtCustomer = (TextView) custView.findViewById(R.id.txtCustomer);
-        TextView txtOperations = (TextView) custView.findViewById(R.id.txtOperations);
+        TextView txtCustomerAdap = (TextView) custView.findViewById(R.id.txtCustomer);
+        TextView txtOperationsAdap = (TextView) custView.findViewById(R.id.txtOperations);
 
         final Customers customer = this.getItem(position);
         txtID.setText(position + 1);
-        txtCustomer.setText(customer.getName());
-        txtOperations.setText(customer.getOperations());
+        txtCustomerAdap.setText(customer.getName());
+        txtOperationsAdap.setText(customer.getOperations());
 
         return custView;
     }
