@@ -33,6 +33,8 @@ public class Movies implements Parcelable{
         year = in.readInt();
     }
 
+
+
     public String getName() {
         return name;
     }
