@@ -1,15 +1,12 @@
 package com.example.bretz.a23913_gonzalez_examen01;
 
-import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.CursorAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
 public class CustomerActivity extends AppCompatActivity {
-
     CustomersAdapter CustomerAdapter;
     ListView CustListView;
     ArrayList<Customers> customerArray;
@@ -19,9 +16,6 @@ public class CustomerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer);
-
-        //mySQLiteAdaper = new SQLiteDatabase(this);
-        //mySQLiteAdaper.
 
         CustListView = (ListView) findViewById(R.id.lstQueue);
         CustomerAdapter = new CustomersAdapter(this);

@@ -1,6 +1,5 @@
 package com.example.bretz.a23913_gonzalez_examen01;
 import android.content.Context;
-import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.View;
@@ -50,7 +49,7 @@ public class CustomersAdapter extends ArrayAdapter<Customers>{
         DBUtils._cusName = txtCustomerAdap.getText().toString();
         DBUtils._cusOper = txtOperationsAdap.getText().toString();*/
 
-        btnDel.setOnClickListener(new View.OnClickListener() {
+        /*btnDel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 DB.open();
@@ -58,7 +57,7 @@ public class CustomersAdapter extends ArrayAdapter<Customers>{
                 DB.close();
                 remove(customer);
                 notifyDataSetChanged();
-            }
+            } });*/
 
         /*String helperID =  txtID.getText().toString();
         int helperName = Integer.parseInt(txtOperationsAdap.toString());
@@ -66,7 +65,7 @@ public class CustomersAdapter extends ArrayAdapter<Customers>{
         CustomerHelper helperCus = new CustomerHelper();
         helperCus.addCustomers(helperID , helperName, helperPos);*/
 
-        });
+
         return custView;
     }
 

@@ -3,11 +3,7 @@ package com.example.bretz.a23913_gonzalez_examen01.Utils;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.view.View;
-import android.widget.TextView;
 
-import com.example.bretz.a23913_gonzalez_examen01.CustomersAdapter;
-import com.example.bretz.a23913_gonzalez_examen01.R;
 
 /**
  * Created by bretz on 9/22/2017.

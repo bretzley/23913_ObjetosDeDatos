@@ -50,9 +50,13 @@ public class CustomerHelper {
         cursor.moveToFirst();
         Customers oCustomer = parseCustomer(cursor);
         cursor.close();
-        return null;
+        return oCustomer;
     }
 
+    public  void deleteCustomers(){
+        database.delete(DBUtils.CUSTOMER_TABLE_NAME, DBUtils.CUSTOMER_OPERATIONS+" > 0", null);
+
+    }
     public int deleteCustomer(int nCustomerID){
         return database.delete(DBUtils.CUSTOMER_TABLE_NAME,DBUtils.CUSTOMER_ID+" = "+nCustomerID,null);
     }
@@ -77,6 +81,7 @@ public class CustomerHelper {
         Customers oCustomer = new Customers();
         oCustomer.setName(cursor.getString(cursor.getColumnIndex(DBUtils.CUSTOMER_NAME)));
         oCustomer.setOperations(cursor.getInt(cursor.getColumnIndex(DBUtils.CUSTOMER_OPERATIONS)));
+        oCustomer.setPosition(cursor.getInt(cursor.getColumnIndex(DBUtils.CUSTOMER_POSITION)));
         return oCustomer;
     }
 
