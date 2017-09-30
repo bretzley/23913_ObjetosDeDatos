@@ -27,9 +27,7 @@ public class CustomerHelper {
         dbHelper = new DBUtils(context);
     }
 
-    public CustomerHelper() {
 
-    }
 
     public void open() throws SQLException{
         database = dbHelper.getWritableDatabase();

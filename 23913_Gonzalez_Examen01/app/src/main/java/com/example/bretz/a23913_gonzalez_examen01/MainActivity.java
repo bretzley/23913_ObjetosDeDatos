@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity{
 
 
     CustomersAdapter customerAdap;
-    ArrayList<Customers> array_customers = new ArrayList<Customers>();
+    public ArrayList<Customers> array_customers = new ArrayList<Customers>();
     SQLiteDatabase db;
     CustomerHelper DB;
 
@@ -43,7 +43,9 @@ public class MainActivity extends AppCompatActivity{
         final EditText txt_operations  = (EditText) findViewById(R.id.txtOperations);
         ListView lst_customers = (ListView)findViewById(R.id.lstCustomers);
         customerAdap = new CustomersAdapter(this);
+
         lst_customers.setAdapter(customerAdap);
+        DB = customerAdap.returnDB();
 
         btn_add.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -60,10 +62,9 @@ public class MainActivity extends AppCompatActivity{
                     customerAdap.add(newCustomer);
                     customerAdap.notifyDataSetChanged();
                 }
-                int ID = array_customers.size() +1;
+                //int ID = array_customers.size() +1;
 
-                /*array_customers.add(customer);
-                Toast.makeText(getApplicationContext(),"Customer Added Successfully!",Toast.LENGTH_LONG).show();*/
+                //array_customers.add(newCustomer);
             }
         });
 
