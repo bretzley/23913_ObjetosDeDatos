@@ -7,21 +7,26 @@
     tools:context="com.example.bretz.a23913_gonzalez_examen01.CustomerActivity">
 
     <TextView
+        android:id="@+id/txtCustomersView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Position Customer Operations"
-        android:id="@+id/txtCustomersView"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:text="Position | Customer | Operations"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <ListView
+        android:id="@+id/lstQueue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/lstQueue"
-        android:choiceMode="none"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/txtCustomersView"
-        android:layout_alignParentStart="true" />
+        android:choiceMode="none"
+        android:paddingTop="15dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp" />
 
 
 </android.support.constraint.ConstraintLayout>

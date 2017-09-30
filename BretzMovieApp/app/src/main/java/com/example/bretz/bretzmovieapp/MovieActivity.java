@@ -20,6 +20,7 @@ public class MovieActivity extends AppCompatActivity{
 
     MovieAdapter oMovieAdapter;
     ListView oListView;
+    ArrayList<Movies> movieArray = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,13 +28,17 @@ public class MovieActivity extends AppCompatActivity{
         setContentView(R.layout.activity_movie);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
+
         oListView = (ListView) findViewById(R.id.lstMovies);
         oMovieAdapter = new MovieAdapter(this);
         oListView.setAdapter(oMovieAdapter);
 
+        movieArray = this.getIntent().getParcelableArrayListExtra("MiLLave");
+
         Movies oMovie = this.getIntent().getParcelableExtra("MiLlave");
-        ArrayList<Movies> movieArray = new ArrayList<>();
+
         movieArray.add(oMovie);
+
 
 
         //<String> myList = (ArrayList<String>) getIntent().getSerializableExtra("mylist");
@@ -62,6 +67,7 @@ public class MovieActivity extends AppCompatActivity{
         //movieArray.add(M);
 
         fillMovieData(movieArray);
+
         //Button btn_close = (Button) findViewById(R.id.btnTwo);
 
 

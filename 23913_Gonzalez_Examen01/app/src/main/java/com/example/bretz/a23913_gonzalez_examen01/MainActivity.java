@@ -16,6 +16,10 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+
+import com.example.bretz.a23913_gonzalez_examen01.Utils.CustomerHelper;
 
 import java.util.ArrayList;
 
@@ -24,6 +28,8 @@ public class MainActivity extends AppCompatActivity{
 
     CustomersAdapter customerAdap;
     ArrayList<Customers> array_customers = new ArrayList<Customers>();
+    SQLiteDatabase db;
+    CustomerHelper DB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,49 +41,44 @@ public class MainActivity extends AppCompatActivity{
         final EditText txt_id = (EditText) findViewById(R.id.txtID);
         final EditText txt_name = (EditText) findViewById(R.id.txtCustomer);
         final EditText txt_operations  = (EditText) findViewById(R.id.txtOperations);
-
-        //final ArrayList<Customers> array_customers = new ArrayList<>();
-        //final ArrayAdapter<Customers> custAdapter = new ArrayAdapter<>(this,android.R.layout.simple_expandable_list_item_1,array_customers);
-
         ListView lst_customers = (ListView)findViewById(R.id.lstCustomers);
         customerAdap = new CustomersAdapter(this);
-        //lst_customers.setAdapter(custAdapter);
         lst_customers.setAdapter(customerAdap);
-
-
 
         btn_add.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-
                 String customerName = txt_name.getText().toString();
                 String operationsNum = txt_operations.getText().toString();
                 int operationsInt = Integer.parseInt(operationsNum);
+
+
+                if(operationsInt > 0) {
+                    DB.open();
+                    Customers newCustomer = DB.addCustomers(customerName, operationsInt, 0);
+                    DB.close();
+                    customerAdap.add(newCustomer);
+                    customerAdap.notifyDataSetChanged();
+                }
                 int ID = array_customers.size() +1;
 
-                Customers customer = new Customers(customerName,operationsInt);
-                array_customers.add(customer);
-
-                customerAdap.add(customer);
-                customerAdap.notifyDataSetChanged();
-                //custAdapter.add(customer);
-
-
-                Toast.makeText(getApplicationContext(),"Customer Added Successfully!",Toast.LENGTH_LONG).show();
-
+                /*array_customers.add(customer);
+                Toast.makeText(getApplicationContext(),"Customer Added Successfully!",Toast.LENGTH_LONG).show();*/
             }
         });
-
 
         btn_queue.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), CustomerActivity.class);
-
-                intent.putExtra("Success",array_customers);
+                //intent.putExtra("Success",array_customers);
+                DB.open();
+                intent.putExtra("Success", DB.getAllCustomers());
+                DB.close();
                 startActivity(intent);
             }
         });
-    }
 
+
+    }
 }

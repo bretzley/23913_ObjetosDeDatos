@@ -12,13 +12,24 @@ public class Customers implements Parcelable{
     private String name;
     private int operations;
 
-    public Customers(String name, int operations){
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
+
+    public int getPosition() {
+        return position;
+    }
+
+    private int position;
+
+    public Customers(){}
+
+    public Customers(String name, int operations, int position){
         this.name = name;
         this.operations = operations;
 
     }
-
-
 
     public Customers(Parcel in){
         name = in.readString();
@@ -28,13 +39,10 @@ public class Customers implements Parcelable{
     public void setName(String name) {
         this.name = name;
     }
+
     public String getName(){return name;}
 
-
-
     public int getOperations(){return operations;}
-
-
 
     public void setOperations(int operations) {
         this.operations = operations;
@@ -57,7 +65,6 @@ public class Customers implements Parcelable{
         public  Customers createFromParcel(Parcel in){
             return new Customers(in);
         }
-
 
         public Customers[] newArray(int size){
             return new Customers[size];
