@@ -14,22 +14,19 @@
         android:layout_alignParentTop="true"
         android:paddingLeft="10dp"
         android:paddingTop="5dp"
-        android:text="Position | Customer | Operations | Visits"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="0dp" />
+        android:text="Position | Customer | Operations"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <ListView
         android:id="@+id/lstQueue"
-        android:layout_width="381dp"
-        android:layout_height="506dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/txtCustomersView"
         android:choiceMode="none"
         android:paddingTop="15dp"
         tools:layout_editor_absoluteX="0dp"
-        android:layout_marginTop="0dp"
-        app:layout_constraintTop_toBottomOf="@+id/txtCustomersView" />
+        tools:layout_editor_absoluteY="16dp" />
 
 
 </android.support.constraint.ConstraintLayout>

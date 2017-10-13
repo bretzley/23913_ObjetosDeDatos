@@ -4,21 +4,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import com.example.bretz.a23913_gonzalez_examen01.Utils.CustomerHelper;
 import java.util.ArrayList;
-import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity{
 
 
     CustomersAdapter customerAdap;
     public ArrayList<Customers> array_customers = new ArrayList<Customers>();
-    private ArrayList<Visits> visit;
-    Button date;
     CustomerHelper helperDB;
 
     @Override
@@ -32,17 +28,11 @@ public class MainActivity extends AppCompatActivity{
         final EditText txt_id = (EditText) findViewById(R.id.txtID);
         final EditText txt_name = (EditText) findViewById(R.id.txtCustomer);
         final EditText txt_operations  = (EditText) findViewById(R.id.txtOperations);
-        final EditText txt_date = (EditText) findViewById(R.id.txtDate);
         ListView lst_customers = (ListView)findViewById(R.id.lstCustomers);
         customerAdap = new CustomersAdapter(this);
 
-        helperDB = new CustomerHelper(getApplicationContext());
         lst_customers.setAdapter(customerAdap);
         helperDB = customerAdap.returnDB();
-
-/*
-        array_customers = new ArrayList<>(Customers);
-        gett(helperDB,customerAdap);*/
 
         btn_add.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -56,9 +46,6 @@ public class MainActivity extends AppCompatActivity{
                     helperDB.open();
                     Customers newCustomer = helperDB.addCustomers(customerName, operationsInt, 0);
                     helperDB.close();
-                    String date = txt_date.getText().toString();
-                    ArrayList<String> dates = new ArrayList<String>();
-                    newCustomer.setVisit(dates);
                     customerAdap.add(newCustomer);
                     customerAdap.notifyDataSetChanged();
                 }
@@ -80,39 +67,17 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
-        btn_del.setOnClickListener(new View.OnClickListener(){
+        /*btn_del.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 helperDB.open();
                 helperDB.deleteCustomers();
                 helperDB.close();
-                array_customers.clear();
                 customerAdap.clear();
                 customerAdap.notifyDataSetChanged();
             }
         });
-
-       /* lst_customers.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Customers customer = array_customers.get(position);
-                deleteCustomer(helperDB, customer.getName());
-                getCustomer(helperDB, customerAdap);
-            }
-        });*/
-    }
-
-
- /*   private void getCustomer(CustomerHelper helper, CustomersAdapter customerAdapter){
-        helper.open();
-        if(helper.getAllCustomers(getDate()).size() >= 0) {
-            array_customers = helper.getAllCustomers(getDate());
-            CustomerActivity.fillCustomers(customerAdap, array_customers);
-        }
-        helper.close();
-    }
 */
 
-
-
+    }
 }

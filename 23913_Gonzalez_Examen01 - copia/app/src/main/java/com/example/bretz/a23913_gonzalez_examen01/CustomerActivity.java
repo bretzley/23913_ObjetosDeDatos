@@ -40,7 +40,7 @@ public class CustomerActivity extends AppCompatActivity {
             for (Customers customers : CustomersList){
                 int operation = customers.getOperations();
                 if(operation > 0){
-                    CustomerAdapter.add(new Customers(customers.getName(), customers.getOperations(), customers.getPosition(), customers.getDate()));
+                    CustomerAdapter.add(new Customers(customers.getName(), customers.getOperations(), customers.getPosition()));
                     customers.setOperations(operation-1);
                 }
                 else {
