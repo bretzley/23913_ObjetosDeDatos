@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
-        "source": "C:\\Users\\bretz\\.android\\build-cache\\888d08b72520ad6d9e9c20f6bc3cde06a02cb43b\\output\\res\\drawable\\abc_ratingbar_small_material.xml"
-    },
-    {
         "merged": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
         "source": "C:\\Users\\bretz\\.android\\build-cache\\888d08b72520ad6d9e9c20f6bc3cde06a02cb43b\\output\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\bretz\\.android\\build-cache\\888d08b72520ad6d9e9c20f6bc3cde06a02cb43b\\output\\res\\drawable\\abc_ratingbar_small_material.xml"
     },
     {
         "merged": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",

@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\src\main\AndroidManifest.xml:2:1-32:12
+ADDED from C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\src\main\AndroidManifest.xml:2:1-33:12
 	package
 		ADDED from C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\src\main\AndroidManifest.xml:3:5-44
 		INJECTED from C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\src\main\AndroidManifest.xml
@@ -57,7 +57,7 @@ ADDED from C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android
 	android:name
 		ADDED from C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\src\main\AndroidManifest.xml:12:22-77
 application
-ADDED from C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\src\main\AndroidManifest.xml:14:5-30:19
+ADDED from C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\src\main\AndroidManifest.xml:14:5-31:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\bretz\.android\build-cache\c506f62a28cfc66d9e751b55813bba7f4f8c0cf3\output\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:25.3.1] C:\Users\bretz\.android\build-cache\654b6d332aa34ac12adf88c4f62023b093c6206c\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\bretz\.android\build-cache\888d08b72520ad6d9e9c20f6bc3cde06a02cb43b\output\AndroidManifest.xml:29:5-20
@@ -103,9 +103,13 @@ ADDED from C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android
 	android:name
 		ADDED from C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\src\main\AndroidManifest.xml:28:19-51
 activity#com.example.bretz.oct6android.PostsActivity
-ADDED from C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\src\main\AndroidManifest.xml:29:9-60
+ADDED from C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\src\main\AndroidManifest.xml:29:9-51
 	android:name
 		ADDED from C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\src\main\AndroidManifest.xml:29:19-48
+activity#com.example.bretz.oct6android.ExpandableListActivity
+ADDED from C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\src\main\AndroidManifest.xml:30:9-69
+	android:name
+		ADDED from C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\src\main\AndroidManifest.xml:30:19-57
 meta-data#android.support.VERSION
 ADDED from [com.android.support:design:25.3.1] C:\Users\bretz\.android\build-cache\654b6d332aa34ac12adf88c4f62023b093c6206c\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\bretz\.android\build-cache\888d08b72520ad6d9e9c20f6bc3cde06a02cb43b\output\AndroidManifest.xml:25:5-27:34

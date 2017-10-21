@@ -33,6 +33,7 @@
         </activity>
         <activity android:name="com.example.bretz.oct6android.CommentsActivity" />
         <activity android:name="com.example.bretz.oct6android.PostsActivity" />
+        <activity android:name="com.example.bretz.oct6android.ExpandableListActivity" />
     </application>
 
 </manifest>

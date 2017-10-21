@@ -29,6 +29,7 @@ public class PostsActivity extends AppCompatActivity {
         for (Posts post : posts)
             postAdapter.add(post);
         postAdapter.notifyDataSetChanged();
+
     }
 
         public void onBackPressed() {

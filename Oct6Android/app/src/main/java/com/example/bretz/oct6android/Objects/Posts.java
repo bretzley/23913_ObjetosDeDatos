@@ -8,13 +8,13 @@ import android.os.Parcelable;
  */
 
 public class Posts implements Parcelable{
-    private String postId;
+    private String userId;
     private String id;
     private String title;
     private String body;
 
     public Posts(Parcel in) {
-        this.postId = in.readString();
+        this.userId = in.readString();
         this.id = in.readString();
         this.title = in.readString();
         this.body = in.readString();
@@ -23,19 +23,19 @@ public class Posts implements Parcelable{
 
     public Posts(){   }
 
-    public Posts(String postId, String id, String title, String body){
-        this.postId = postId;
+    public Posts(String userId, String id, String title, String body){
+        this.userId = userId;
         this.id = id;
         this.title = title;
         this.body = body;
     }
 
     public String getUserId() {
-        return postId;
+        return userId;
     }
 
     public void setUserId(String userId) {
-        this.postId = postId;
+        this.userId = userId;
     }
 
     public String getId() {
@@ -66,7 +66,7 @@ public class Posts implements Parcelable{
 
     public String printPost() {
         String post = "";
-        post += "Post Id: " + this.postId + "\n";
+        post += "User Id: " + this.userId + "\n";
         post += "Id: " + this.id + "\n";
         post += "Title: " + this.title + "\n";
         post += "Body: " + this.body + "\n";
@@ -80,7 +80,7 @@ public class Posts implements Parcelable{
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(postId);
+        dest.writeString(userId);
         dest.writeString(id);
         dest.writeString(title);
         dest.writeString(body);

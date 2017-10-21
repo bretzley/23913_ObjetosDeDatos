@@ -26,7 +26,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".CommentsActivity" />
-        <activity android:name=".PostsActivity"></activity>
+        <activity android:name=".PostsActivity" />
+        <activity android:name=".ExpandableListActivity"></activity>
     </application>
 
 </manifest>

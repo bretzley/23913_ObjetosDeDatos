@@ -9,22 +9,22 @@ import android.os.Parcelable;
 
 public class Comments implements Parcelable{
 
-    private String commentId;
+    private String postId;
     private String id;
     private String name;
     private String email;
     private String body;
 
     public Comments(Parcel in) {
-        this.commentId = in.readString();
+        this.postId = in.readString();
         this.id = in.readString();
         this.name = in.readString();
         this.email = in.readString();
         this.body = in.readString();
     }
 
-    public Comments(String commentId, String id, String name, String email, String body){
-        this.commentId = commentId;
+    public Comments(String postId, String id, String name, String email, String body){
+        this.postId = postId;
         this.id = id;
         this.name = name;
         this.email = email;
@@ -34,11 +34,11 @@ public class Comments implements Parcelable{
     public Comments(){}
 
     public String getPostId() {
-        return commentId;
+        return postId;
     }
 
-    public void setPostId(String postId) {
-        this.commentId = commentId;
+    public void setPostId(String commentId) {
+        this.postId = postId;
     }
 
     public String getId() {
@@ -75,7 +75,7 @@ public class Comments implements Parcelable{
 
     public String printComments(){
         String comment = "";
-        comment += "Comment Id: " + this.commentId + "\n";
+        comment += "Post Id: " + this.postId + "\n";
         comment += "Id: " + this.id + "\n";
         comment += "Name: " + this.name + "\n";
         comment += "Email: " + this.email + "\n";
@@ -90,7 +90,7 @@ public class Comments implements Parcelable{
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(commentId);
+        dest.writeString(postId);
         dest.writeString(id);
         dest.writeString(name);
         dest.writeString(email);

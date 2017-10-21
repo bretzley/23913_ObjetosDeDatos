@@ -40,11 +40,10 @@
         android:id="@+id/btnClear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:text="CLear all"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp"
-        android:layout_alignStart="@+id/btnClick"
+        android:layout_above="@+id/btnExpand"
         android:layout_toStartOf="@+id/btnViewP" />
 
     <Button
@@ -54,19 +53,40 @@
         android:text="Sync Posts"
         tools:layout_editor_absoluteX="148dp"
         tools:layout_editor_absoluteY="16dp"
-        android:layout_alignBaseline="@+id/btnSyncC"
-        android:layout_alignBottom="@+id/btnSyncC"
-        android:layout_toStartOf="@+id/btnSyncC" />
+        android:layout_above="@+id/btnClear"
+        android:layout_toEndOf="@+id/button" />
+
+    <Button
+        android:id="@+id/btnExpand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View All"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/btnClear"
+        android:layout_alignEnd="@+id/btnViewC" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_above="@+id/btnClear"
+        android:layout_alignStart="@+id/btnClear" />
 
     <Button
         android:id="@+id/btnViewP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/btnViewC"
         android:text="View Posts"
         tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_alignBaseline="@+id/btnClear"
+        android:layout_alignBottom="@+id/btnClear"
+        android:layout_toStartOf="@+id/btnViewC" />
 
     <Button
         android:id="@+id/btnSyncC"
@@ -75,18 +95,49 @@
         android:text="Sync Comments"
         tools:layout_editor_absoluteX="280dp"
         tools:layout_editor_absoluteY="16dp"
-        android:layout_above="@+id/btnViewC"
-        android:layout_alignStart="@+id/btnViewC" />
+        android:layout_above="@+id/btnViewP"
+        android:layout_alignEnd="@+id/btnViewC" />
 
     <Button
         android:id="@+id/btnViewC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="13dp"
+        android:layout_marginEnd="20dp"
         android:text="View Comments"
         tools:layout_editor_absoluteX="280dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_alignBaseline="@+id/btnViewP"
+        android:layout_alignBottom="@+id/btnViewP"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/edtUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/edtId"
+        android:ems="10"
+        android:hint="Insert User"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/edtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/edtUser"
+        android:ems="10"
+        android:hint="Insert Post Title"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/edtBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/edtTitle"
+        android:ems="10"
+        android:hint="Insert Post Body"
+        android:inputType="textPersonName" />
 
 </RelativeLayout>

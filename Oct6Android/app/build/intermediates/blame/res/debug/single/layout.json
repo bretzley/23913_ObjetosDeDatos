@@ -20,12 +20,12 @@
         "source": "C:\\Users\\bretz\\.android\\build-cache\\654b6d332aa34ac12adf88c4f62023b093c6206c\\output\\res\\layout\\design_text_input_password_icon.xml"
     },
     {
-        "merged": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_comments.xml",
-        "source": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\src\\main\\res\\layout\\activity_comments.xml"
-    },
-    {
         "merged": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
         "source": "C:\\Users\\bretz\\.android\\build-cache\\888d08b72520ad6d9e9c20f6bc3cde06a02cb43b\\output\\res\\layout\\notification_template_lines_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_comments.xml",
+        "source": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\src\\main\\res\\layout\\activity_comments.xml"
     },
     {
         "merged": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\comment_rows.xml",
@@ -48,12 +48,12 @@
         "source": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\src\\main\\res\\layout\\activity_posts.xml"
     },
     {
-        "merged": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
-        "source": "C:\\Users\\bretz\\.android\\build-cache\\888d08b72520ad6d9e9c20f6bc3cde06a02cb43b\\output\\res\\layout\\abc_action_menu_layout.xml"
-    },
-    {
         "merged": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
         "source": "C:\\Users\\bretz\\.android\\build-cache\\888d08b72520ad6d9e9c20f6bc3cde06a02cb43b\\output\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "C:\\Users\\bretz\\.android\\build-cache\\888d08b72520ad6d9e9c20f6bc3cde06a02cb43b\\output\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
         "merged": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_title_material.xml",
@@ -124,6 +124,10 @@
         "source": "C:\\Users\\bretz\\.android\\build-cache\\888d08b72520ad6d9e9c20f6bc3cde06a02cb43b\\output\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
+        "merged": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_expandable_list.xml",
+        "source": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\src\\main\\res\\layout\\activity_expandable_list.xml"
+    },
+    {
         "merged": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
         "source": "C:\\Users\\bretz\\.android\\build-cache\\654b6d332aa34ac12adf88c4f62023b093c6206c\\output\\res\\layout\\design_navigation_item_header.xml"
     },
@@ -154,6 +158,10 @@
     {
         "merged": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
         "source": "C:\\Users\\bretz\\.android\\build-cache\\888d08b72520ad6d9e9c20f6bc3cde06a02cb43b\\output\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_group.xml",
+        "source": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\src\\main\\res\\layout\\list_group.xml"
     },
     {
         "merged": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
@@ -190,6 +198,10 @@
     {
         "merged": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
         "source": "C:\\Users\\bretz\\.android\\build-cache\\888d08b72520ad6d9e9c20f6bc3cde06a02cb43b\\output\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_item.xml",
+        "source": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\src\\main\\res\\layout\\list_item.xml"
     },
     {
         "merged": "C:\\Users\\bretz\\AndroidStudioProjects\\23913_ObjetosDeDatos\\Oct6Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",

@@ -3,21 +3,39 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\bretz\.gradle\caches\modules-2\files-2.1\org.hamcrest\hamcrest-core\1.3\42a25dc3219429f0e5d060061f71acb49bf010a0\hamcrest-core-1.3.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.0"
-        sha1="42a25dc3219429f0e5d060061f71acb49bf010a0">
-        <dex dex="C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\hamcrest-core-1.3_ccff8d6139c08db1567cc98af998b4fe3be336e9\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\bretz\.android\build-cache\2c7927530422998e0dc1486285752dcd885e2918\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.0"
         sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
         <dex dex="C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3b20e6674810731ef06d0ed32fea33be0a23f2ee\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\bretz\.android\build-cache\c613bf1a9cce4448a9d9bac41126430ec42d8948\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="e40b9a81989bd4a846018551c280f8c4d837bf2e">
+        <dex dex="C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_283ef65a388df2f5d3aede5292cc4078278b5428\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="cf03f25f80790300f82431f2dbfd8c7c23ab04a3">
+        <dex dex="C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_b3f84885118c90017911fb2fc526594f5de62540\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\bretz\.gradle\caches\modules-2\files-2.1\org.hamcrest\hamcrest-core\1.3\42a25dc3219429f0e5d060061f71acb49bf010a0\hamcrest-core-1.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="42a25dc3219429f0e5d060061f71acb49bf010a0">
+        <dex dex="C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\hamcrest-core-1.3_ccff8d6139c08db1567cc98af998b4fe3be336e9\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -36,24 +54,6 @@
         revision="26.0.0"
         sha1="2973d150c0dc1fefe998f834810d68f278ea58ec">
         <dex dex="C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\junit-4.12_6302caea8f84f325d3cab7011bf25346f7d3e09c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\bretz\.android\build-cache\c613bf1a9cce4448a9d9bac41126430ec42d8948\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.0"
-        sha1="e40b9a81989bd4a846018551c280f8c4d837bf2e">
-        <dex dex="C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_283ef65a388df2f5d3aede5292cc4078278b5428\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.0"
-        sha1="096018f712abac5e71483addccf04113ed2c9a63">
-        <dex dex="C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_b3f84885118c90017911fb2fc526594f5de62540\classes.dex" />
     </item>
 
 </items>
