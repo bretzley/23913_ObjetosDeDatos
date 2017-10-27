@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -30,10 +31,11 @@ public class MainActivity extends AppCompatActivity {
     //RECUPERE MI PROYECTITOOOOOOOOOOOOOOOOOOOO :D
     TextView txtView1, txtView2, txtId;
     EditText edtUser, edtTitle, edtBody;
-    Button btnClick, btnSyncPosts, btnSyncComments, btnViewPosts, btnViewComments, btnClear, btnPost, btnExpand;
+    Button btnSyncPosts, btnSyncComments, btnViewPosts, btnViewComments, btnClear, btnAsyncTask, btnExpand;
     DBHelper db;
     ArrayList<Posts> posts;
     ArrayList<Comments> comments;
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         edtUser = (EditText) findViewById(R.id.edtUser);
         edtTitle = (EditText) findViewById(R.id.edtTitle);
         edtBody = (EditText) findViewById(R.id.edtBody);
-        //btnClick = (Button) findViewById((R.id.btnClick));
+        btnAsyncTask = (Button) findViewById((R.id.btnAsyncTask));
         btnSyncPosts = (Button) findViewById((R.id.btnSyncP));
         btnSyncComments = (Button) findViewById((R.id.btnSyncC));
         btnViewPosts = (Button) findViewById((R.id.btnViewP));
@@ -55,9 +57,11 @@ public class MainActivity extends AppCompatActivity {
         btnClear = (Button) findViewById((R.id.btnClear));
         posts = new ArrayList<>();
         comments = new ArrayList<>();
-        String postsURL = "http://jsonplaceholder.typicode.com/posts";
+        final String postsURL = "http://jsonplaceholder.typicode.com/posts";
         String commentsURL = "http://jsonplaceholder.typicode.com/comments";
         String newURL = "http://107.170.247.123:20403/posts";
+        /*progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.INVISIBLE);*/
         final RequestQueue queue = Volley.newRequestQueue(this);
 
 
@@ -191,14 +195,17 @@ public class MainActivity extends AppCompatActivity {
                 Intent intentC = new Intent(getApplicationContext(), ExpandableListActivity.class);
                 Snackbar.make(v, "Data is being synchronized...", Snackbar.LENGTH_SHORT).setAction("Action", null).show();
                 db.open();
+                posts = db.getAllPosts();
+                comments = db.getAllComments();
+                db.close();
                 //db.deleteAllPosts();
                 //db.deleteAllComments();
                 //queue.add(postsArrayRequest);
                 //queue.add(commentsArrayRequest);
-                intentC.putExtra("Parcel", db.getAllPosts());
-                intentC.putExtra("Parcel", db.getAllComments());
+                intentC.putExtra("Posts", posts);
+                intentC.putExtra("Comments", comments);
 
-                db.close();
+
                 startActivity(intentC);
             }
         });
@@ -216,6 +223,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        btnAsyncTask.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                //new AsyncTaksActivity.HttpAsyncTask().execute("http://jsonplaceholder.typicode.com/posts/15");
+                //Intent intent = new Intent(getApplicationContext(), AsyncTaksActivity.class);
+                //startActivity(intent);
+            }
+        });
         /*btnPost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -267,6 +282,62 @@ public class MainActivity extends AppCompatActivity {
         }
         return comment;
     }
+
+
+   /* public static String getHTTPRequest(String url) {
+        URL obj = null;
+        HttpURLConnection con = null;
+        try {
+            obj = new URL(url);
+            con = (HttpURLConnection) obj.openConnection();
+            con.setRequestMethod("GET");
+
+            int responseCode = con.getResponseCode();
+
+            if (responseCode == HttpURLConnection.HTTP_OK) {
+                BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+                String inputLine;
+                StringBuffer response = new StringBuffer();
+
+                while ((inputLine = in.readLine()) != null) {
+                    response.append(inputLine);
+                }
+                in.close();
+
+                return response.toString();
+            } else {
+                return "POST request did not work.";
+            }
+        } catch (IOException e) {
+            return e.getMessage();
+        }
+    }
+
+
+    private class HttpAsyncTask extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected void onPreExecute() {
+            progressBar.setVisibility(View.VISIBLE);
+        }
+
+        @Override
+        protected void onProgressUpdate(Void... values) {
+            super.onProgressUpdate(values);
+        }
+
+        @Override
+        protected String doInBackground(String... urls) {
+            return getHTTPRequest(urls[0]);
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            progressBar.setVisibility(View.INVISIBLE);
+            Toast.makeText(getApplicationContext(), "Received!" + result, Toast.LENGTH_LONG).show();
+
+        }
+    }*/
 
 
 

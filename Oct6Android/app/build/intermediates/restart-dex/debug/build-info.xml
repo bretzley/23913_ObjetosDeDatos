@@ -6,22 +6,22 @@
     density="560dpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1508547182971"
+    timestamp="1509077556235"
     token="-8255590144828357818"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="869" />
+        duration="682" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="34" />
+        duration="25" />
     <task
         name="verifier"
-        duration="7" />
+        duration="6" />
 
     <artifact
         location="C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
@@ -29,7 +29,7 @@
 
     <build
         build-mode="FULL"
-        timestamp="1508542375343"
+        timestamp="1509073850778"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
@@ -70,7 +70,21 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1508545117657"
+        timestamp="1509077403978"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\build\outputs\apk\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1509077479676"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
@@ -78,7 +92,7 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1508547182971"
+        timestamp="1509077556235"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\bretz\AndroidStudioProjects\23913_ObjetosDeDatos\Oct6Android\app\build\intermediates\split-apk\debug\slices\slice_9.apk"

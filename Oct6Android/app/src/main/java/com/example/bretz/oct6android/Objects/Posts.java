@@ -3,6 +3,9 @@ package com.example.bretz.oct6android.Objects;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 /**
  * Created by bretz on 10/12/2017.
  */
@@ -28,6 +31,18 @@ public class Posts implements Parcelable{
         this.id = id;
         this.title = title;
         this.body = body;
+    }
+
+    public Posts (String jsonString) {
+        try {
+            JSONObject jsonObject = new JSONObject(jsonString);
+            this.userId = jsonObject.getInt("userId") + "";
+            this.id = jsonObject.getInt("id") + "";
+            this.title = jsonObject.getString("title");
+            this.body = jsonObject.getString("body");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     public String getUserId() {
@@ -86,6 +101,18 @@ public class Posts implements Parcelable{
         dest.writeString(body);
     }
 
+    public JSONObject toJSON(){
+        JSONObject jsonObject= new JSONObject();
+        try {
+            jsonObject.put("userId", getUserId());
+            jsonObject.put("title", getTitle());
+            jsonObject.put("body", getBody());
+            return jsonObject;
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 
     public static final Parcelable.Creator CREATOR = new Parcelable.Creator(){
         @Override

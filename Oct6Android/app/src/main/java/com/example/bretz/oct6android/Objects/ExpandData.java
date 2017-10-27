@@ -14,7 +14,9 @@ public class ExpandData {
         TreeMap<String, List<String>> expandableListDetail = new TreeMap<>();
 
         for (Posts p : posts) {
-            String pString = "ID: " + p.getId() + " - " + p.getTitle() +"\n"+ p.getBody();
+            String pString = "Title: " + p.getTitle() + " - Id:" + p.getId() +"\n"+ p.getBody();
+            //String pString = "ID: " + p.getId() + " - " + p.getTitle() +"\n"+ p.getBody();
+
             List<String> commentStrings = new ArrayList<>();
 
             for(Comments c : comments) {

@@ -94,7 +94,7 @@ public class DBHelper {
     }
 
     public ArrayList<Posts> getAllPosts() {
-        ArrayList<Posts> posts = new ArrayList<Posts>();
+        ArrayList<Posts> posts = new ArrayList<>();
         Cursor cursor = database.query(DBUtils.POST_TABLE, POST_TABLE_COLUMNS, null, null, null, null, null);
         cursor.moveToFirst();
         while(!cursor.isAfterLast()) {
@@ -106,7 +106,7 @@ public class DBHelper {
     }
 
     public ArrayList<Comments> getAllComments() {
-        ArrayList<Comments> comments = new ArrayList<Comments>();
+        ArrayList<Comments> comments = new ArrayList<>();
         Cursor cursor = database.query(DBUtils.COMMENT_TABLE, COMMENT_TABLE_COLUMNS, null, null, null, null, null);
         cursor.moveToFirst();
         while(!cursor.isAfterLast()) {
@@ -120,8 +120,8 @@ public class DBHelper {
     private Comments parseComment(Cursor cursor) {
         Comments comment = new Comments();
         //if( cursor != null && cursor.moveToFirst() ) {
-            comment.setId(cursor.getInt(cursor.getColumnIndex(DBUtils.COMMENT_ID)) + "");
-            comment.setPostId(cursor.getInt(cursor.getColumnIndex(DBUtils.COMMENT_POST)) + "");
+            comment.setId(""+cursor.getInt(cursor.getColumnIndex(DBUtils.COMMENT_ID)) + "");
+            comment.setPostId(""+cursor.getInt(cursor.getColumnIndex(DBUtils.COMMENT_POST)) + "");
             comment.setName(cursor.getString(cursor.getColumnIndex(DBUtils.COMMENT_NAME)));
             comment.setEmail(cursor.getString(cursor.getColumnIndex(DBUtils.COMMENT_EMAIL)));
             comment.setBody(cursor.getString(cursor.getColumnIndex(DBUtils.COMMENT_BODY)));
@@ -132,8 +132,8 @@ public class DBHelper {
     private Posts parsePost(Cursor cursor) {
         Posts post = new Posts();
         //if( cursor != null && cursor.moveToFirst() ) {
-            post.setId(cursor.getInt(cursor.getColumnIndex(DBUtils.POST_ID)) + "");
-            post.setUserId(cursor.getInt(cursor.getColumnIndex(DBUtils.POST_USER)) + "");
+            post.setId(""+cursor.getInt(cursor.getColumnIndex(DBUtils.POST_ID)) + "");
+            post.setUserId(""+cursor.getInt(cursor.getColumnIndex(DBUtils.POST_USER)) + "");
             post.setTitle(cursor.getString(cursor.getColumnIndex(DBUtils.POST_TITLE)));
             post.setBody(cursor.getString(cursor.getColumnIndex(DBUtils.POST_BODY)));
         //}

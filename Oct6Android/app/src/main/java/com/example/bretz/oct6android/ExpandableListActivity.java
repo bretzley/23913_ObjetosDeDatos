@@ -29,8 +29,8 @@ public class ExpandableListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expandable_list);
-        posts = this.getIntent().getParcelableArrayListExtra("Parcel");
-        comments = this.getIntent().getParcelableArrayListExtra("Parcel");
+        posts = this.getIntent().getParcelableArrayListExtra("Posts");
+        comments = this.getIntent().getParcelableArrayListExtra("Comments");
         expandableListView = (ExpandableListView) findViewById(R.id.ExpandableListView);
         expandableListDetail = ExpandData.getData(posts, comments);
 

@@ -3,6 +3,9 @@ package com.example.bretz.oct6android.Objects;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 /**
  * Created by bretz on 10/12/2017.
  */
@@ -37,7 +40,7 @@ public class Comments implements Parcelable{
         return postId;
     }
 
-    public void setPostId(String commentId) {
+    public void setPostId(String postId) {
         this.postId = postId;
     }
 
@@ -46,7 +49,7 @@ public class Comments implements Parcelable{
     }
 
     public void setId(String id) {
-        id = id;
+        this.id = id;
     }
 
     public String getEmail() {
@@ -81,6 +84,20 @@ public class Comments implements Parcelable{
         comment += "Email: " + this.email + "\n";
         comment += "Body: " + this.body + "\n";
         return comment;
+    }
+
+    public JSONObject toJSON(){
+        JSONObject jsonObject= new JSONObject();
+        try {
+            jsonObject.put("postId", getPostId());
+            jsonObject.put("name", getName());
+            jsonObject.put("email", getEmail());
+            jsonObject.put("body", getBody());
+            return jsonObject;
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     @Override
