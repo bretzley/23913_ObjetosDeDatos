@@ -1,11 +1,24 @@
 package com.example.bretz.oct6android;
 
+import android.content.Context;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.Toast;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 public class AsyncTaksActivity extends AppCompatActivity {
     static ProgressBar progressBar;
-/*    @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_async_taks);
@@ -56,6 +69,7 @@ public class AsyncTaksActivity extends AppCompatActivity {
 
     static class HttpAsyncTask extends AsyncTask<String, Void, String> {
 
+
         @Override
         protected void onPreExecute() {
             progressBar.setVisibility(View.VISIBLE);
@@ -74,8 +88,10 @@ public class AsyncTaksActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
             progressBar.setVisibility(View.INVISIBLE);
-            Toast.makeText(getApplicationContext(), "Received!" + result, Toast.LENGTH_LONG).show();
+            Toast.makeText(getContext(), "Received!" + result, Toast.LENGTH_LONG).show();
 
         }
-    }*/
+
+
+    }
 }

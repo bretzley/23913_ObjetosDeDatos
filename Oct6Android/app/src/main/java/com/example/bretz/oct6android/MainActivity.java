@@ -226,9 +226,9 @@ public class MainActivity extends AppCompatActivity {
         btnAsyncTask.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                //new AsyncTaksActivity.HttpAsyncTask().execute("http://jsonplaceholder.typicode.com/posts/15");
-                //Intent intent = new Intent(getApplicationContext(), AsyncTaksActivity.class);
-                //startActivity(intent);
+                new AsyncTaksActivity.HttpAsyncTask().execute("http://jsonplaceholder.typicode.com/posts/15");
+                Intent intent = new Intent(getApplicationContext(), AsyncTaksActivity.class);
+                startActivity(intent);
             }
         });
         /*btnPost.setOnClickListener(new View.OnClickListener() {
